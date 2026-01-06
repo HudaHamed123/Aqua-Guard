@@ -1,0 +1,18 @@
+
+
+.nav-link {
+  color: #00EEFF;
+  transition: color 0.3s;
+}
+
+
+.nav-link.active-link {
+  background-color: #62BAE9 !important;
+  color: #ffffff !important;
+
+  padding: 6px 12px;   // مهم عشان الشكل
+  border-radius: 9999px; // pill shape
+}
+//   border-bottom: 2px solid #00FFFF;
+//   padding-bottom: 2px;
+

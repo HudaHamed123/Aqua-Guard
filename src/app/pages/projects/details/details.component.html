@@ -1,0 +1,14 @@
+<section class="pb-20 font-['Cairo']">
+  <app-reuse></app-reuse>
+  <div class="max-w-screen-xl mx-auto px-4">
+   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-6 items-center">
+    @for (img of project.images; track $index){
+    <img
+      [src]="img"
+      class="rounded-xl shadow-md w-full h-80 object-cover transition-transform duration-300 hover:scale-105"
+      alt="Project image"
+    />}
+</div>
+  </div>
+</section>
+

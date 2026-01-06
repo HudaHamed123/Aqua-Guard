@@ -1,0 +1,45 @@
+<section id="About" class="bg-[#F4F4F4] ">
+ <app-reuse></app-reuse>
+  <div
+    class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start pb-10"
+  >
+    <div class="text-gray-700 leading-loose text-lg order-2 lg:order-1">
+        <h2 class="text-4xl md:text-5xl font-bold text-[#40B1E5] mb-8"> {{title}}</h2> 
+      @for (paragraph of aboutSection.paragraphs; track $index) {
+     
+        <p class="mt-4">
+          {{ paragraph }}
+        </p>
+      }
+    </div>
+    <div class="space-y-3 order-1 lg:order-2 pt-16">
+      @for (item of accordionItems; track $index) {
+        <div class="border border-gray-200 rounded-lg overflow-hidden bg-white">
+          <button
+            (click)="toggleItem($index)"
+            class="w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 transition" >
+            <span class="font-semibold text-gray-800">
+              {{ item.title }}
+            </span>
+            <i
+              class="fa-solid transition-transform duration-300 text-white text-2xl bg-[#40B1E5]"
+              [class.fa-chevron-down]="!item.open"
+              [class.fa-chevron-up]="item.open"></i>
+          </button>
+          <div
+            class="px-4 text-gray-600 text-sm leading-relaxed overflow-hidden transition-all duration-300"
+            [class.max-h-0]="!item.open"
+            [class.max-h-96]="item.open"
+            [class.py-0]="!item.open"
+            [class.py-4]="item.open">
+            {{ item.content }}
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+
+
+

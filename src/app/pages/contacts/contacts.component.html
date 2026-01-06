@@ -1,0 +1,122 @@
+<section id="Contact">
+ <app-reuse></app-reuse>
+  <div class=" mx-auto overflow-hidden">
+    <h2 class="text-center italic text-4xl text-[#40B1E5] font-bold py-16">
+      تواصل معنا
+    </h2>
+    <div class="container mx-auto gap-10 grid grid-cols-1 lg:grid-cols-2 p-4 pb-20">
+      <div class="mx-auto flex flex-col container ">
+        <h2 class="text-4xl font-bold mb-10">
+          لنبدأ الحديث
+        </h2>
+        <p class="font-semibold text-sm md:text-lg">
+          <span class="text-2xl text-[#40B1E5]">نحن</span>
+          دائمًا في خدمتك للإجابة على جميع استفساراتك ومساعدتك في تنفيذ مشروع أحلامك من البداية حتى التشغيل الكامل لحمام السباحة.
+        </p>
+        @for (contact of contacts; track $index) {
+          <div
+            class="shadow-2xl bg-white rounded-3xl mt-10 p-8 
+                   hover:shadow-[0_0_20px_#40B1E5] flex items-center cursor-pointer">
+            <i class="{{contact.icon}} text-3xl text-[#40B1E5] me-5 mt-2"></i>
+            <div>
+              @if (contact.email) { <p class="">{{contact.email}}</p> }
+              @if (contact.phone) { <p class="">{{contact.phone}}</p> }
+              @if (contact.location){ <p class="">{{contact.location}}</p> }
+            </div>
+
+          </div>} 
+       <div class="bg-[#F4F4F4] rounded-3xl mt-10 p-4 shadow-2xl flex flex-row relative hover:shadow-[0_0_20px_#40B1E5]">
+  <div class="text-center">
+    <h3 class="font-semibold mb-4 italic text-2xl">تابعنا</h3>
+    <i class="fa-solid fa-hand-point-left text-[#40B1E5] text-3xl animate-bounce mb-6"></i>
+  </div>
+  <div class="flex flex-row-reverse items-center gap-3 mt-4">
+    @for (social of socials; track $index) {
+      <div class="relative group">
+        <span
+         (click)="openLink(social.url)"
+          class="border-2 rounded-full w-12 h-12 lg:w-14 lg:h-14 flex items-center justify-center cursor-pointer transition hover:scale-110"
+          [style]="{
+            'border-color': social.color || '#40B1E5',
+            'color': social.color || '#40B1E5'}">
+          <i class="fa-brands {{social.icon}} text-xl lg:text-2xl"></i>
+        </span>
+        <span
+          class="absolute top-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 rounded-full text-xs font-medium text-white bg-gray-800 shadow-lg opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 whitespace-nowrap">
+          {{ social.icon.replace('fa-', '').toUpperCase() }}
+        </span>
+      </div>
+    }
+  </div>
+</div>
+      </div>
+      <div class="bg-white shadow-[0_0_20px_#40B1E5] h-[700px] rounded-3xl py-10 px-4 md:px-8 ">
+        <h3 class="text-3xl text-center font-bold mb-6">أرسل رسالة</h3>
+        <form>
+          <!-- Name -->
+          <div class="my-4">
+            <label for="first_name" class="block mb-2.5 italic text-lg font-medium text-[#40B1E5]">
+              الاسم
+            </label>
+            <input name="name" type="text" id="first_name"
+              class="bg-white border border-[#40B1E5]  text-sm rounded-xl
+                     focus:border-[#40B1E5] block w-full px-4 py-3
+                     hover:shadow-[0_0_20px_#40B1E5]"
+              placeholder="الاسم" required />
+          </div>
+
+          <!-- Email -->
+          <div class="my-4">
+            <label for="Email-Address" class="block mb-2.5 italic text-lg font-medium text-[#40B1E5]">
+              البريد الإلكتروني
+            </label>
+            <input name="email" type="email" id="Email-Address"
+              class="bg-white border border-[#40B1E5]  text-sm rounded-xl
+                     focus:border-[#40B1E5] block w-full px-4 py-3
+                     hover:shadow-[0_0_20px_#40B1E5]"
+              placeholder="البريد الإلكتروني" required />
+          </div>
+
+          <!-- Subject -->
+          <div class="my-4">
+            <label for="subject" class="block mb-2.5 italic text-lg font-medium text-[#40B1E5]">
+              الموضوع
+            </label>
+            <input name="subject" type="text" id="subject"
+              class="bg-white border border-[#40B1E5]  text-sm rounded-xl
+                     focus:border-[#40B1E5] block w-full px-4 py-3
+                     hover:shadow-[0_0_20px_#40B1E5]"
+              placeholder="الموضوع" required />
+          </div>
+
+          <!-- Message -->
+          <div class="my-4">
+            <label for="message" class="block mb-2.5 italic text-lg font-medium text-[#40B1E5]">
+              رسالتك
+            </label>
+            <textarea name="message" id="message" rows="4"
+              class="bg-white border border-[#40B1E5]  text-sm rounded-xl
+                     focus:border-[#40B1E5] block w-full px-4 py-3
+                     hover:shadow-[0_0_20px_#40B1E5]"
+              placeholder="اكتب رسالتك هنا..."></textarea>
+          </div>
+
+          <!-- Button -->
+          <button
+            class="bg-[#40B1E5]  px-5 py-3 rounded-xl my-10 w-full font-semibold 
+                   hover:bg-[#0091d1] transition text-white">
+            <i class="fa-solid fa-paper-plane text-white"></i>
+            أرسل الرسالة
+            @if (isloading) { <i class="fas fa-spinner fa-spin"></i> }
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+

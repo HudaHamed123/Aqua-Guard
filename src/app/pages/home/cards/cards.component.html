@@ -1,0 +1,31 @@
+<section class="py-16 sm:py-20 bg-gray-50 font-['Cairo']">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p class="text-sky-500 font-semibold mb-3 text-sm sm:text-base">
+      خدمات ذات جودة عالية
+    </p>
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-red-500 mb-10 sm:mb-14">
+      ما يميز اكواجارد
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
+      @for (item of features; track $index) {
+        <div  #card
+          class="group bg-white rounded-2xl p-6 sm:p-8 
+                 transition-all duration-300
+                 hover:-translate-y-2  animate-card"
+          [style.boxShadow]="'0 15px 40px ' + item.color + '55'">
+          <i
+            class="{{ item.icon }} text-4xl sm:text-5xl mb-4 sm:mb-6 block
+                   transition-transform duration-300 text-center mx-auto
+                   group-hover:scale-110"
+            [style.color]="item.color">
+          </i>
+          <h3 class="text-lg sm:text-xl font-bold mb-2 sm:mb-4">
+            {{ item.title }}
+          </h3>
+          <p class="text-gray-500 text-xs sm:text-sm leading-relaxed">
+            {{ item.desc }}
+          </p>
+        </div>}
+    </div>
+  </div>
+</section>

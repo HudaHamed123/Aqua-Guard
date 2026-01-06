@@ -1,0 +1,47 @@
+<section id="Projects" class="pb-20 bg-[#F4F4F4] font-['Cairo']">
+  <app-reuse></app-reuse>
+  <div class="max-w-screen-xl mx-auto px-4">
+      <h2 class="text-3xl md:text-5xl font-bold text-red-500 text-center pb-6">
+   مشاريعنا
+  </h2>
+    <div class="w-16 h-1 bg-sky-400 mx-auto mb-10"></div>
+      <p class="text-gray-500 max-w-3xl mx-auto text-center text-lg leading-relaxed mb-10">
+جميع المشروعات المذكوره هي سابقة أعمال صاحب الشركة (احمد حسن) منفذه تحت إشرافه علي الاعمال لصالح شركات مقاولات مختلفة تعمل في نفس المجال.
+      </p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+  @for (project of projectsService.projects; track $index) {
+    <div class="rounded-3xl overflow-hidden shadow-xl group bg-white">
+      <img
+        [src]="project.image"
+        loading="lazy"
+        class="w-full h-72 object-cover" />
+      <div class="flex items-center justify-between h-30 space-x-6 rtl:space-x-reverse py-4">
+        <div class="flex-1">
+          <h3 class="text-xl font-bold mb-2 px-2">
+            {{ project.title }}
+          </h3>
+          <p class="text-gray-600 mb-2 px-2">
+            {{ project.description }}
+          </p>
+        </div>
+        <div class="px-2">
+          <button
+            (click)="goToDetails(project.id)"
+            class="inline-flex items-center gap-2
+                   bg-[#40B1E5] text-white
+                   px-5 py-2 rounded-full
+                   font-semibold
+                   hover:bg-[#2d9cc9]
+                   transition"
+          >
+            عرض التفاصيل
+            <i class="fa-solid fa-arrow-left-long"></i>
+          </button>
+        </div>
+      </div>
+    </div>}
+</div>
+  </div>
+</section>
+
+

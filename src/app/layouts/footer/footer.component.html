@@ -1,0 +1,62 @@
+<footer class="w-full bg-[#0963B1] pt-10">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10">
+    <div class="space-y-2 ps-2">
+      <h3 class="text-lg font-bold text-cyan-300">شركتنا</h3>
+      <p class="text-sm text-gray-300 leading-relaxed">
+        اكوا جارد شركة متميزة في تنفيذ وصيانة المنشآت المائية بأعلى جودة وبأسعار تنافسية
+      </p>
+    </div>
+    <div class="space-y-2 ps-2">
+      <h3 class="text-lg font-bold text-cyan-300">روابط مهمة</h3>
+      <ul class="space-y-2 text-sm">
+        @for (section of sections; track $index) {
+          <li>
+            <a
+              [routerLink]="section.route"
+              routerLinkActive="text-cyan-300 font-semibold"
+              [routerLinkActiveOptions]="{ exact: true }"
+              class="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-cyan-300 transition"
+            >
+              <i class="{{ section.icon }}"></i>
+              {{ section.name }}
+            </a>
+          </li>
+        }
+      </ul>
+    </div>
+    <div class="space-y-2 ps-2">
+      <h3 class="text-lg font-bold text-cyan-300">تواصل معنا</h3>
+      <ul class="space-y-2 text-md text-gray-300">
+        <li>📍 مطروح الكيلو 2</li>
+        <li>📧 Aqua Guard&commat;gmail.com</li>
+        <li>📞 201008293713+</li>
+      </ul>
+      <div class="flex items-center gap-3 mt-4">
+        @for (social of socials; track $index) {
+          <span
+            (click)="openLink(social.url)"
+            class="border-2 rounded-full w-12 h-12 flex items-center justify-center cursor-pointer transition hover:scale-110"
+            [style.borderColor]="social.color"
+            [style.color]="social.color"
+          >
+            <i class="fa-brands {{ social.icon }} text-xl"></i>
+          </span>
+        }
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Divider -->
+  <div class="w-full h-px bg-white my-8"></div>
+
+  <!-- Copyright -->
+  <div class="text-center text-md font-medium text-white pb-6">
+    © 2025 Aqua Guard — All rights reserved.
+  </div>
+</footer>
+
+
+
+
+

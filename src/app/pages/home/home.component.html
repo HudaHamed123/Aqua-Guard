@@ -1,0 +1,37 @@
+<section id="Home">
+    <section
+  class="relative w-full h-[100vh] bg-center bg-cover flex items-center justify-center"
+  style="background-image: url('assets/pool1.jpeg');">
+  <div class="absolute inset-0 bg-black/50"></div>
+  <!-- Content -->
+  <div class="relative z-10 text-center px-4 font-['Cairo']">
+    <h1 class="text-white text-3xl md:text-5xl font-bold mb-4">
+     مرحباً بكم في الموقع الرسمي لشركة  أكوا جارد
+    </h1>
+    <p class="text-white text-lg md:text-2xl max-w-3xl mx-auto pt-4">
+      احدى الشركات الرائدة في مجال حمامات السباحة والجاكوزي
+      والشلالات والنافورات واللاندسكيب
+    </p>
+  </div>
+</section>
+<app-slider></app-slider>
+<app-feature></app-feature>
+<app-card></app-card>
+<section class="relative w-full min-h-[70vh] flex items-center justify-center text-center overflow-hidden bg-cover bg-center bg-fixed"
+          [style]="{'background-image': 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(' + heroImage + ')'}">
+  <!-- النصوص -->
+  <div class="px-4 z-10">
+    <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white">
+      ليه تختار اكوا جارد
+    </h2>
+    <p class="text-lg sm:text-xl md:text-2xl mt-4 mb-2 text-white">
+      اكوا جارد شركة متميزه في تنفيذ وصيانة المنشات المائية
+    </p>
+    <span class="md:text-md font-semibold text-white md:text-xl">
+      باعلى جودة  باسعار تنافسية
+    </span>
+  </div>
+</section>
+<app-cards></app-cards>
+</section>
+
