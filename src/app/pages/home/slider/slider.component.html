@@ -18,6 +18,7 @@
     @for (img of images; track $index) {
     <swiper-slide class="h-48 md:h-64 lg:h-80 flex items-center justify-center">
       <img
+       loading="lazy"
         [src]="img"
         alt="slide image"
         class="w-full h-full object-cover rounded-3xl"
