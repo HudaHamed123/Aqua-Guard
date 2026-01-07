@@ -1,8 +1,7 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, ViewChild } from '@angular/core';
-import { gsap } from 'gsap';
 import { register } from 'swiper/element/bundle';
 import { ReuseComponent } from '../../shared/components/reuse/reuse.component';
-import { NgFor, NgIf } from '@angular/common';
+
 
 register();
 
