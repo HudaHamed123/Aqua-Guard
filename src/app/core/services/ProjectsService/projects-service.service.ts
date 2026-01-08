@@ -5,7 +5,7 @@ export class ProjectsService {
   projects = [
     {
       id: 1,
-      title: 'أكوا بارك',
+     
       description: 'اوليمبي نادي الواحة الاسماعيلية',
       image: 'assets/12.JPG',
       details: 'تفاصيل المشروع كاملة هنا...',
@@ -26,7 +26,7 @@ export class ProjectsService {
     }   ,
         {
       id: 21,
-      title: 'أكوا بارك',
+     
       description: 'مجمع حمامات سباحة فندق جرين ديزرت السادات',
       image: '/assets/2023.JPG',
       details: 'تفاصيل الأكوا بارك هنا...',
@@ -46,8 +46,8 @@ export class ProjectsService {
     },
           {
       id: 9,
-      title: 'أكوا بارك',
-      description: 'اوليمبي نادي جاردينيا زهراء مدينةحمام سباحة فيلا 127 الرحاب نص',
+     
+      description: ' حمام سباحة فيلا 127 الرحاب ',
       image:  '/assets/9I.jpg',
       details: 'تفاصيل الأكوا بارك هنا...',
       images: [
@@ -65,7 +65,7 @@ export class ProjectsService {
   
         {
       id: 3,
-      title: 'أكوا بارك',
+     
       description: 'حمام سباحة الحي السكني الراقي بالجلالة',
       image: '/assets/3N.jpg',
       details: 'تفاصيل الأكوا بارك هنا...',
@@ -91,7 +91,7 @@ export class ProjectsService {
     },
         {
       id: 5,
-      title: 'أكوا بارك',
+     
       description: 'حمام سباحة A20 سيدي حنيش',
       image:   '/assets/5D.JPG',
       details: 'تفاصيل الأكوا بارك هنا...',
@@ -105,7 +105,7 @@ export class ProjectsService {
     },
          {
       id: 13,
-      title: 'أكوا بارك',
+     
       description: 'حمام سباحة فيلا E13 سيدي حنيش',
       image:   'assets/Untitled design.jpg',
       details: 'تفاصيل الأكوا بارك هنا...',
@@ -121,7 +121,7 @@ export class ProjectsService {
     },
         {
       id: 6,
-      title: 'أكوا بارك',
+     
       description: 'حمام السباحة الترفيهي نادي جاردينيا زهراء مدينة نصر',
       image:   'assets/6X.JPG',
       details: 'تفاصيل الأكوا بارك هنا...',
@@ -152,7 +152,7 @@ export class ProjectsService {
     },
         {
       id: 7,
-      title: 'أكوا بارك',
+     
       description: 'حمام سباحة فيكتوريا 7 مراسي',
       image:'assets/7L.JPG',
       images: [
@@ -174,7 +174,7 @@ export class ProjectsService {
     },
         {
       id: 8,
-      title: 'أكوا بارك',
+     
       description: ' حمام سباحة فيلا  م احمد النجار مفيدا التجمع',
       image:  '/assets/8I.jpg',
       details: ' ',
@@ -194,7 +194,7 @@ export class ProjectsService {
   
         {
       id: 10,
-      title: 'أكوا بارك',
+     
       description: 'حمام سباحة فيلا A7 سيدى حنيش ',
       image:     '/assets/10M.JPG',
       images: [
@@ -216,7 +216,7 @@ export class ProjectsService {
     },
         {
       id: 14,
-      title: 'أكوا بارك',
+     
       description: 'حمام سباحة فيلا الرحاب',
       image:   '/assets/14D.jpg',
       details: 'تفاصيل الأكوا بارك هنا...',
@@ -237,7 +237,7 @@ export class ProjectsService {
     ,
         {
       id: 16,
-      title: 'أكوا بارك',
+     
       description: 'حمام سباحة كمباوند ليان',
       image: '/assets/16I.jpg',
       details: 'تفاصيل الأكوا بارك هنا...',
@@ -257,7 +257,7 @@ export class ProjectsService {
         ,
         {
       id: 19,
-      title: 'أكوا بارك',
+     
       description: 'فيلا الحاج امير البحيرة',
       image: '/assets/19d.jpg',
       details: 'تفاصيل الأكوا بارك هنا...',
@@ -271,7 +271,7 @@ export class ProjectsService {
     ,
         {
       id: 20,
-      title: 'أكوا بارك',
+     
       description: 'فيلا م رامي صليب بالتجمع',
       image:  '/assets/1513.jpg',
       details: 'تفاصيل الأكوا بارك هنا...',
@@ -289,7 +289,7 @@ export class ProjectsService {
     ,
         {
       id: 17,
-      title: 'أكوا بارك',
+     
       description: 'حمام سباحة منطقة الخدمات اسكان ضباط القوات المسلحة بالعلمين',
       image: '/assets/17F.jpg',
       details: 'تفاصيل الأكوا بارك هنا...',
@@ -308,7 +308,7 @@ export class ProjectsService {
      ,
         {
       id: 15,
-      title: 'أكوا بارك',
+     
       description: 'حمام سباحة فيلا م خليل مامون جولف العبور',
       image:  '/assets/15F.jpg',
       details: 'تفاصيل الأكوا بارك هنا...',
@@ -325,7 +325,7 @@ export class ProjectsService {
     },
         {
       id: 18,
-      title: 'أكوا بارك',
+     
       description: 'حمام سباحة منطقة الفيلا اسكان ضباط القوات المسلحة بالعلمين',
       image:   '/assets/18L.jpg',
       details: 'تفاصيل الأكوا بارك هنا...',
@@ -346,7 +346,7 @@ export class ProjectsService {
     }
 ,  {
       id: 2,
-      title: 'أكوا بارك',
+     
       description: 'اوليمبي نادي جاردينيا زهراء مدينة نصر',
       image:  'assets/2N.JPG',
       details: 'تفاصيل الأكوا بارك هنا...',
@@ -366,7 +366,7 @@ export class ProjectsService {
     },
         {
       id: 12,
-      title: 'أكوا بارك',
+     
       description: 'حمام سباحة فيلا C13 سيدي حنيش',
       image:   '/assets/12C.JPG',
       details: 'تفاصيل الأكوا بارك هنا...',

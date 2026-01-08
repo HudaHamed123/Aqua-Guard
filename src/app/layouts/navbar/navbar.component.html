@@ -1,22 +1,27 @@
 <nav
   #navbar
-  class="fixed w-full z-20 top-0 start-0 rtl:font-['Cairo'] transition-colors duration-300 bg-transparent"
+  class="fixed w-full z-20 top-0 start-0 rtl:font-['Cairo'] transition-colors duration-300 bg-transparent rounded-xl"
 >
-  <div class="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between p-4">
+  <div class="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between px-4">
     
-    <!-- Logo -->
-    <a routerLink="/home" class="flex items-center gap-2">
-<span
-  class="text-2xl font-bold italic
-         bg-gradient-to-r
-         from-[#155E8A]
-         via-[#2FA4D9]
-         to-[#6ECFEF]
-         text-transparent bg-clip-text">
-  Aqua Guard
-</span>
-     
-    </a>
+<a routerLink="/home" class="flex flex-col items-center p-1 m-0">
+  <img 
+       src="assets/ChatGPT Image Jan 8, 2026, 03_30_48 AM.png" 
+       class="h-24 w-24 object-cover block" 
+       alt="Logo" />
+  <span class="text-2xl font-bold italic
+               bg-gradient-to-r
+               from-[#155E8A]
+               via-[#2FA4D9]
+               to-[#6ECFEF]
+               text-transparent bg-clip-text
+               mt-1 leading-none">
+    Aqua Guard
+  </span>
+</a>
+
+
+
 
     <!-- Hamburger Button -->
     <button
@@ -77,7 +82,7 @@
             class="nav-link flex items-center gap-2 py-2 px-3 text-white font-bold hover:text-[#00EEFF] transition-colors duration-300"
           >
             <i class="fa-regular fa-lightbulb"></i>
-            مشروعنا
+          المشروعات 
           </a>
         </li>
 
@@ -88,7 +93,7 @@
             class="nav-link flex items-center gap-2 py-2 px-3 text-white font-bold hover:text-[#00EEFF] transition-colors duration-300"
           >
             <i class="fa-regular fa-envelope"></i>
-            اتصل بينا
+            اتصل بنا
           </a>
         </li>
 

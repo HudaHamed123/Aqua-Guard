@@ -12,7 +12,7 @@ export class CardsComponent {
   features = [
     {
       title: 'الصيانة',
-      desc: 'جميع قطع الغيار متوفرة على مدار السنة لدينا.',
+      desc: ' التشغيل والصيانة وخدمة ما بعد مرحلة الانشاء',
       icon: 'fa-solid fa-screwdriver-wrench',
       color: '#0ea5e9'
     },

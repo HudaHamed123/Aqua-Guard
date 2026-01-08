@@ -15,4 +15,8 @@
 }
 //   border-bottom: 2px solid #00FFFF;
 //   padding-bottom: 2px;
-
+img {
+  display: block; /* يمنع الفراغ اللي بيجي من inline element */
+  margin: 0;
+  padding: 0;
+}
