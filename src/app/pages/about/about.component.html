@@ -4,13 +4,31 @@
     class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start pb-10"
   >
     <div class="text-gray-700  leading-loose text-lg order-2 lg:order-1">
-        <h3 class="text-4xl md:text-5xl font-bold text-[#40B1E5] mb-8"> {{title}}</h3> 
-      @for (paragraph of aboutSection.paragraphs; track $index) {
-     
-        <p class="mt-4 space-y-2 leading-tight">
-          {{ paragraph }}
-        </p>
-      }
+        <h3 class="text-4xl md:text-5xl font-bold text-[#40B1E5] mb-7"> {{title}}</h3> 
+   @for (paragraph of aboutSection.paragraphs; track $index) {
+  @if (paragraph.type === 'title') {
+    <h4 class="mt-2 text-2xl font-bold text-[#155E8A]">
+      {{ paragraph.text }}
+    </h4>
+  }
+  @if (paragraph.type === 'text') {
+    <p class="mt-2 text-gray-700 leading-relaxed">
+      {{ paragraph.text }}
+    </p>
+  }
+  @if (paragraph.type === 'list') {
+    <p class="mt-1 ps-4 relative text-gray-600 before:content-['•'] before:absolute before:start-0 before:text-[#40B1E5]">
+      {{ paragraph.text }}
+    </p>
+  }
+  @if (paragraph.type === 'highlight') {
+    <p class="mt-2 text-center font-semibold text-[#40B1E5]">
+      {{ paragraph.text }}
+    </p>
+  }
+
+}
+
     </div>
     <div class="space-y-8 order-1 lg:order-2 pt-20 ">
       @for (item of accordionItems; track $index) {

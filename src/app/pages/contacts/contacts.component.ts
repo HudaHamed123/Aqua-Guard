@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ReuseComponent } from "../../shared/components/reuse/reuse.component";
-
+import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 @Component({
   selector: 'app-contacts',
   imports: [ReuseComponent],
@@ -10,9 +10,24 @@ import { ReuseComponent } from "../../shared/components/reuse/reuse.component";
 export class ContactsComponent {
   title:string='تواصل معنا';
 isloading:boolean=false
-
+  public sendEmail(e: Event) {
+    e.preventDefault();
+this.isloading=true
+    emailjs.sendForm(
+      'service_oksmjsg',
+      'template_4u9mwcg',
+      e.target as HTMLFormElement,
+      { publicKey: 'qYvGdzctEpPqmAz9m' }
+    ).then(
+    () => {
+          console.log('SUCCESS!');
+          this.isloading=false;
+          (e.target as HTMLFormElement).reset();
+},
+    );
+  }
   contacts:any[] = [
-    { icon: 'fa-solid fa-envelope-circle-check', email: 'Aqua guard@gmail.com' },
+    { icon: 'fa-solid fa-envelope-circle-check', email: 'info@aquaguardeg.com' },
     { icon: 'fa-solid fa-square-phone', phone: '01008293713' },
     { icon: 'fa-solid fa-location-dot', location: 'مطروح, كيلو 2' }
   ];
