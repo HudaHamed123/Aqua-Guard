@@ -20,7 +20,7 @@ export class ServicesComponent {
   }
 
 
- 
+
 
 
   tabs = [
@@ -55,20 +55,21 @@ export class ServicesComponent {
   ];
 
   spaClubs: string[] = [
-      '/assets/2023.JPG',
+      'assets/2023.JPG',
       'assets/photo_2026-01-06_17-26-46.jpg',
               'assets/photo_2026-01-06_17-26-49.jpg',
                 'assets/photo_2026-01-06_17-26-54.jpg',
+                'assets/14B.jpg',
                   'assets/photo_2026-01-06_17-26-58.jpg',
-  'assets/photo_2026-01-06_17-26-13.jpg',
+                   'assets/14C.jpg',
     'assets/photo_2026-01-06_17-26-24.jpg',
       'assets/photo_2026-01-06_17-26-35.jpg',
         'assets/photo_2026-01-06_17-26-39.jpg',
           'assets/photo_2026-01-06_17-26-42.jpg',
-          
+
   ];
 
-  
+
   getTabImages(tab: string): string[] {
     switch(tab) {
       case 'services': return this.privateBaths;
@@ -79,9 +80,9 @@ export class ServicesComponent {
   }
   // waterGames: string[] = [
   //  '/assets/2023.JPG',
-    
+
   // ];
- 
+
 }
 
 
